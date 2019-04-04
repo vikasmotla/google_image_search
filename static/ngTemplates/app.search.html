@@ -1,7 +1,7 @@
 <div class="zillion_state_search">
   <div class="zillion_search_box">
     <div class="zillion_search_form">
-      <input ng-model="form.value" type="text" placeholder="Search Images...">
+      <input ng-enter="search()" ng-model="form.value" type="text" placeholder="Type To Search Images...">
       <button ng-click="search()" type="button" class="zillion_search_btn ripple">Search</button>
     </div>
     <p class="zillion_error" ng-if="form.showError.length>0">{{form.showError}}</p>
