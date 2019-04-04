@@ -1,0 +1,10 @@
+<button type="button" ng-click="backToHistory()" class="histGoBack ripple"> Go Back </button>
+<h2 class="zillion_heading" >{{keyword}}</h2>
+<div class="imageResults" ng-if="form.gotData">
+  <div class="zillion_images" ng-repeat="img in searchResults" >
+    <img src="{{img}}" alt="">
+  </div>
+</div>
+<div ng-if="!form.gotData">
+  <h3 style="text-align: center;color: #c6c1c1">No Data</h3>
+</div>

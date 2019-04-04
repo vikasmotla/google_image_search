@@ -1,0 +1,18 @@
+<div class="zillion_state_search">
+  <div class="zillion_search_box">
+    <div class="zillion_search_form">
+      <input ng-model="form.value" type="text" placeholder="Search Images...">
+      <button ng-click="search()" type="button" class="zillion_search_btn ripple">Search</button>
+    </div>
+    <p class="zillion_error" ng-if="form.showError.length>0">{{form.showError}}</p>
+  </div>
+  <div class="imageResults" ng-if="form.gotData">
+    <div class="zillion_images" ng-repeat="img in searchResults" >
+      <img src="{{img.url}}" alt="">
+    </div>
+    <div class="zillion_images" ng-repeat="img in searchResults" >
+      <img src="{{img.url}}" alt="">
+    </div>
+  </div>
+
+</div>

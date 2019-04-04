@@ -1,0 +1,33 @@
+<div class="zillion_history">
+
+  <h2 class="zillion_heading" >Searched History</h2>
+
+  <div class="zillion_hist_table">
+    <p ng-if="history.length>0" style="font-size: 12px;color: #7e8a92;letter-spacing: 1px;">*Click on any keyword to fetch results</p>
+    <div ng-if="history.length>0" class="zillion_hist_row main_row">
+      <div class="zillion_hist_index">
+        S.No.
+      </div>
+      <div class="zillion_hist_keyword">
+        Keywords
+      </div>
+      <div class="zillion_hist_searchedOn">
+        Searched On
+      </div>
+    </div>
+    <h3 ng-if="history.length==0" style="text-align:center;color: #7e8a92;letter-spacing: 1.5px;">No History Data.</h3>
+
+    <div ng-if="history.length>0" ng-repeat="h in history" class="zillion_hist_row ">
+      <div class="zillion_hist_index">
+        {{$index+1}}.
+      </div>
+      <div class="zillion_hist_keyword">
+        <span class="histItem" ng-click="getImagesOfThisKey(h._id)">{{h.keyword}}</span>
+      </div>
+      <div class="zillion_hist_searchedOn">
+        {{h.searched_on | date:'dd-MMM-yyyy'}}
+      </div>
+    </div>
+  </div>
+
+</div>

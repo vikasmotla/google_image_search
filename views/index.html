@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Zillion Assignment </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/ripple.min.css">
+  </head>
+  <body>
+
+    <div class="zillion_container" ng-app="zillion_app" ng-controller="zillion_controller">
+      <div class="left_container">
+        <ul class="zillion_ul">
+          <li class="{{selectedView.name=='home'?'zillion_li_active':''}} ripple" ng-click="changeView('home')">Home</li>
+          <li class="{{selectedView.name=='search'?'zillion_li_active':''}} ripple" ng-click="changeView('search')">Search</li>
+          <li class="{{selectedView.name=='history'?'zillion_li_active':''}} ripple" ng-click="changeView('history')">History</li>
+        </ul>
+      </div>
+      <div class="right_container">
+        <div ui-view></div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/static/js/angular.min.js" ></script>
+    <script type="text/javascript" src="/static/js/angular-ui-router.min.js" ></script>
+    <script type="text/javascript" src="/static/js/zillion_angular.js" ></script>
+  </body>
+
+</html>
